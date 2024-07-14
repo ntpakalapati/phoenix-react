@@ -4,20 +4,23 @@ import { LuLayoutGrid } from "react-icons/lu";
 import { Link } from "react-router-dom";
 import { AdminHeaderSearch } from "./AdminHeaderSearch";
 import { AdminSmNavbar } from "./AdminSmNavbar";
-
+import { AdminSmMenu } from "./AdminSmMenu";
 export function AdminHeader() {
 
     return (
-        <div className="bg-white  border-b border-b-black/25 py-3 px-3 md:px-6 fixed top-0 w-full flex justify-between items-center">
-            <div className="flex gap-1.5 items-center">
-                <AdminSmNavbar/>
+        <div className="bg-white  border-b border-b-black/25 py-3 px-8 md:px-6 fixed top-0 w-full flex justify-between items-center">
+            <AdminSmNavbar />
+            <div>
                 <Link to="/" className="flex items-center gap-1">
                     <img src="phoenix_logo.png" alt="Logo" className="w-8 object-contain" />
-                    <h2 className="hidden lg:block font-medium text-[28px] text-gray-500 -mt-2">phoenix</h2>
+                    <h2 className="font-medium text-[28px] text-gray-500 -mt-2">phoenix</h2>
                 </Link>
             </div>
             <AdminHeaderSearch />
-            <div className='flex items-center gap-2'>
+            <div className="block lg:hidden">
+                <AdminSmMenu />
+            </div>
+            <div className='hidden lg:flex items-center gap-2'>
                 <div className="bg-gray-200 p-2 rounded-full lg:hidden block">
                     <ImSearch className="rotate-90 text-blue-700 text-lg" />
                 </div>
