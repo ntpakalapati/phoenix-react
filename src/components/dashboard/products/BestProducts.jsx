@@ -6,6 +6,7 @@ import {
   TableRow
 } from "./../../ui/table";
 import Pagination from '../../common/Pagenation';
+import { RiArrowDropDownLine } from 'react-icons/ri';
 
 const prodcuts = [
   {
@@ -105,10 +106,13 @@ export function BestProducts() {
   );
 
   return (
-    <div className="bg-white shadow-md rounded-lg w-[100%] mt-4">
+    <div className="bg-white shadow-md rounded-lg lg:w-[49%] w-[100%] mt-4">
       <div className="flex justify-between p-4 border-b">
-        <h2 className="text-lg font-semibold text-gray-700">Best Selling Products</h2>
-        <p className='text-[12px] mt-1'>SORT BY: Today</p>
+        <p className="text-[16px] font-medium text-[#495057] leading-[19.2px]">Best Selling Products</p>
+        <div className='flex mt-1'>
+          <p className='text-[12px] font-semibold leading-[18px] text-[#212529] uppercase'>Sort By : </p>
+          <span className='flex text-[13px] leading-[19.5px] ml-[2px] text-[#878A99]'>Today <RiArrowDropDownLine className='mt-1'/></span>
+        </div>
       </div>
       <Table>
         <TableBody>
@@ -120,26 +124,26 @@ export function BestProducts() {
                     <img alt="" src={product.imageUrl} className="h-[40px] w-[40px] max-w-full flex-none" />
                   </div>
                   <div>
-                    <p className="text-sm font-semibold leading-6 text-gray-900">{product.name}</p>
-                    <p className="mt-1 truncate text-xs leading-5 text-gray-500">{product.date}</p>
+                    <p className="text-[14px] mt-1 font-medium leading-[16.8px] text-[#495057]">{product.name}</p>
+                    <p className="mt-1 truncate text-[13px] leading-[19.5px] text-[#878A99]">{product.date}</p>
                   </div>
                 </div>
               </TableCell>
               <TableCell>
-                <p className="text-sm font-semibold leading-6 text-gray-900">{product.price}</p>
-                <p className="mt-1 truncate text-xs leading-5 text-gray-500">Price</p>
+                <p className="text-[14px] mt-1 font-medium leading-[16.8px] text-[#495057]">{product.price}</p>
+                <p className="mt-1 truncate text-[13px] leading-[19.5px] text-[#878A99]">Price</p>
               </TableCell>
               <TableCell>
-                <p className="text-sm font-semibold leading-6 text-gray-900">{product.orders}</p>
-                <p className="mt-1 truncate text-xs leading-5 text-gray-500">Orders</p>
+                <p className="text-[14px] mt-1 font-medium leading-[16.8px] text-[#495057]">{product.orders}</p>
+                <p className="mt-1 truncate text-[13px] leading-[19.5px] text-[#878A99]">Orders</p>
               </TableCell>
               <TableCell>
-                <p className="text-sm font-semibold leading-6 text-gray-900">{product.stocks}</p>
-                <p className="mt-1 truncate text-xs leading-5 text-gray-500">Stocks</p>
+                <p className="text-[14px] mt-1 font-medium leading-[16.8px] text-[#495057]">{product.stocks}</p>
+                <p className="mt-1 truncate text-[13px] leading-[19.5px] text-[#878A99]">Stocks</p>
               </TableCell>
               <TableCell>
-                <p className="text-sm font-semibold leading-6 text-gray-900">{product.amount}</p>
-                <p className="mt-1 truncate text-xs leading-5 text-gray-500">Amount</p>
+                <p className="text-[14px] mt-1 font-medium leading-[16.8px] text-[#495057]">${product.amount}</p>
+                <p className="mt-1 truncate text-[13px] leading-[19.5px] text-[#878A99]">Amount</p>
               </TableCell>
             </TableRow>
           ))}

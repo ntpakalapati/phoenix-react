@@ -5,6 +5,7 @@ import { BestProducts } from "../dashboard/products/BestProducts";
 import { TopSellers } from "../dashboard/products/TopSellers";
 import { SourceChart } from "../dashboard/charts/SourceChart";
 import { Orders } from "../dashboard/Orders";
+import { RiArrowDropDownLine } from "react-icons/ri";
 
 export function Default() {
   return (
@@ -18,17 +19,19 @@ export function Default() {
           <TopSellers />
         </div>
         <div className="lg:flex block w-full px-[4px] gap-5">
-          <div className="bg-white shadow-md rounded-lg mt-4 lg:w-[35%] w-[100%]">
-            <div className="flex justify-between p-4 border-b">
-              <h2 className="text-lg font-semibold text-gray-700">Store Visits by Source</h2>
-              <p className='text-[12px] mt-1'>Reports</p>
+          <div className="bg-white shadow-md rounded-lg mt-4 lg:w-[32%] w-[100%]">
+            <div className="flex justify-between p-4 border-b mt-1">
+              <p className="text-[16px] font-medium text-[#495057] leading-[19.2px]">Store Visits by Source</p>
+              <span className='flex text-[13px] leading-[19.5px] ml-[2px] text-[#878A99]'>Reports <RiArrowDropDownLine className='mt-1' /></span>
             </div>
-            <SourceChart />
+            <div className="p-2 lg:block flex justify-center">
+              <SourceChart /> 
+            </div>
           </div>
-          <div className="bg-white shadow-md rounded-lg mt-4 lg:w-[65%] w-[100%]">
-            <div className="flex justify-between p-4 border-b">
-              <h2 className="text-lg font-semibold text-gray-700">Recent Orders</h2>
-              <p className='text-[12px] mt-1'>Reports</p>
+          <div className="bg-white shadow-md rounded-lg mt-4 lg:w-[68%] w-[100%]">
+            <div className="flex justify-between p-4 border-b ">
+              <p className="text-[16px] mt-1 font-medium text-[#495057] leading-[19.2px]">Recent Orders</p>
+              <p className='text-[13px] mt-1 leading-[19.5px] text-[#878A99]'>Reports</p>
             </div>
             <Orders />
           </div>
