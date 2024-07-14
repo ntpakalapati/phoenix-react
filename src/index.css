@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.text-black\/60 {
+  color: #8A94AD;
+}
+.p-4 {
+  padding: 12px;
+}
