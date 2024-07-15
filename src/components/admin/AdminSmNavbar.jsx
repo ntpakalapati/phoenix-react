@@ -11,7 +11,7 @@ export function AdminSmNavbar() {
         <div className="lg:hidden block">
             <Sheet>
                 <SheetTrigger className="flex items-center justify-center">
-                    <IoMdMenu className="text-3xl" />
+                    <IoMdMenu className="text-3xl text-[#3f6ad8ec]" />
                 </SheetTrigger>
                 <SheetContent side={'left'}>
 

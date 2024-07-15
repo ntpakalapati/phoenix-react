@@ -4,7 +4,6 @@ import { AdminHeaderSearch } from "./AdminHeaderSearch";
 import { AdminSmNavbar } from "./AdminSmNavbar";
 import { AdminProfile } from "./AdminProfile";
 export function AdminHeader({ isOpen, toggleDialogBox }) {
-
     return (
         <div className="bg-white  border-b border-b-black/25 py-3 px-4 md:px-6 fixed top-0 w-full flex justify-between items-center">
             <AdminSmNavbar />
