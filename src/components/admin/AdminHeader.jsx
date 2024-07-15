@@ -8,7 +8,7 @@ import { AdminSmMenu } from "./AdminSmMenu";
 export function AdminHeader() {
 
     return (
-        <div className="bg-white  border-b border-b-black/25 py-3 px-8 md:px-6 fixed top-0 w-full flex justify-between items-center">
+        <div className="bg-white  border-b border-b-black/25 py-3 px-4 md:px-6 fixed top-0 w-full flex justify-between items-center">
             <AdminSmNavbar />
             <div>
                 <Link to="/" className="flex items-center gap-1">
