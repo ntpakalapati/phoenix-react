@@ -12,7 +12,7 @@ export function AdminSmMenu() {
     return (
         <div>
             <button className=" bg-[#3F6AD8] py-2 rounded-md cursor-pointer" onClick={toggleDialogBox} >
-                <HiDotsVertical className="text-white text-2xl" />
+                <HiDotsVertical className="text-white text-2xl md:text-8xl" />
             </button>
             {/* Dialog Box */}
             {isOpen && (
@@ -48,6 +48,7 @@ export function AdminSmMenu() {
                             </div>
                         </div>
                     </div>
+                    
                 </div>
 
             )}
