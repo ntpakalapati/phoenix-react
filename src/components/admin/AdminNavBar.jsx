@@ -8,7 +8,7 @@ export function AdminNavBar({ toggleSidebar }) {
     return (
         <nav className='h-full w-full flex flex-col text-[12.8px] leading-[19.008px] whitespace-nowrap font-[600px] text-[#3E465B]' style={{ fontFamily: 'Nunito Sans, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"' }}>
             <div className='flex-grow bg-white pr-[1px] py-[1px] overflow-hidden border-r border-r-black/25'>
-                <div className='overflow-y-auto overflow-x-hidden h-full p-3 scrollbar' id="style-1">
+                <div className='overflow-y-auto overflow-x-hidden h-full p-3 scrollbar navbar-scrollbar-content' id="style-1">
                     <div>
                         <Accordion type="single" collapsible>
                             <AdminNavHome />

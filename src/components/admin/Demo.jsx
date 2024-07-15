@@ -1,14 +1,15 @@
 import React from 'react';
 import { LuArrowRightToLine } from "react-icons/lu";
+
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuTrigger, } from "../ui/dropdown-menu"
 import { collapseData } from '../../lib/admin';
 
 export function AdminCollapseSideBar({ toggleSidebar }) {
     return (
         <div className='h-full w-full flex flex-col'>
-            <div className='flex-grow bg-white border-r border-r-black/25 overflow-hidden pr-[1px] py-[1px]'>
+            <div className='flex-grow overflow-hidden pr-[1px] py-[1px]'>
                 <div className='overflow-y-auto h-full p-2 scrollbar navbar-scrollbar-content ' id="style-1">
-                    <ul className='flex flex-col items-center pt-2'>
+                    <ul className='flex flex-col items-center pt-4'>
                         {
                             collapseData.map((data, index) =>
                                 <li key={index}>
@@ -42,7 +43,7 @@ export function AdminCollapseSideBar({ toggleSidebar }) {
                     </ul>
                 </div>
             </div>
-            <div className='p-[15.5px] relative border-t border-t-black/25 border-r border-r-black/25 bg-white'>
+            <div className='p-[15.5px] relative bg-[#fafbfcbd]'>
                 <div onClick={toggleSidebar} className="flex cursor-pointer justify-center gap-1 items-center">
                     <button >
                         <LuArrowRightToLine className="text-xl" />

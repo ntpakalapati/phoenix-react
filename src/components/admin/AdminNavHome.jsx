@@ -12,9 +12,9 @@ export function AdminNavHome() {
             </AccordionTrigger>
             <AccordionContent>
                 <ul className='w-[75%] mx-auto text-start pl-3 mt-1'>
-                    <li className='hover:bg-gray-100 rounded-md text-[13px] p-1.5 px-3'>E commerce</li>
-                    <li className='hover:bg-gray-100 rounded-md text-[13px] p-1.5 px-3'>Project management</li>
-                    <li className='hover:bg-gray-100 rounded-md text-[13px] p-1.5 px-3'>CRM</li>
+                    <li className='hover:bg-gray-100 rounded-md text-[13px] p-1.5 px-3'><Link to="/eComm">E commerce</Link></li>
+                    <li className='hover:bg-gray-100 rounded-md text-[13px] p-1.5 px-3'><Link to="/projMgmt">Project management</Link></li>
+                    <li className='hover:bg-gray-100 rounded-md text-[13px] p-1.5 px-3'><Link to="/crm">CRM</Link></li>
                 </ul>
             </AccordionContent>
         </AccordionItem>

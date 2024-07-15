@@ -17,7 +17,6 @@
   background-color: #5555557c;
 }
 
-
 /* Search Expandable */
 /* Add this CSS to your global stylesheet or a CSS module */
 .fade-in {
@@ -47,6 +46,50 @@
     opacity: 0;
   }
 }
+
+
+/* Dashboard Border */
+.dashboard-border{
+  border: 1px solid rgba(128, 128, 128, 0.253);
+}
+
+
+
+
+.scroll-bar-border {
+  overflow-y: scroll;
+  mask-image: linear-gradient(to top, transparent, black),
+    linear-gradient(to left, transparent 0px, black 500px);
+  mask-size: 100% 20000px;
+  mask-position: left bottom;
+  -webkit-mask-image: linear-gradient(to top, transparent, black),
+    linear-gradient(to left, transparent 0px, black 10px);
+  -webkit-mask-size: 100% 20000px;
+  -webkit-mask-position: left bottom;
+  transition: mask-position 0.3s, -webkit-mask-position 0.3s;
+}
+
+.scroll-bar-border:hover {
+  -webkit-mask-position: left top;
+}
+
+.navbar-scrollbar-content {
+  overflow-y: scroll;
+  mask-image: linear-gradient(to top, transparent, black),
+    linear-gradient(to left, transparent 17px, black 17px);
+  mask-size: 100% 20000px;
+  mask-position: left bottom;
+  -webkit-mask-image: linear-gradient(to top, transparent, black),
+    linear-gradient(to left, transparent 17px, black 17px);
+  -webkit-mask-size: 100% 20000px;
+  -webkit-mask-position: left bottom;
+  transition: mask-position 0.3s, -webkit-mask-position 0.3s;
+}
+
+.navbar-scrollbar-content:hover {
+  -webkit-mask-position: left top;
+}
+
 
 .chart-container {
   position: relative;

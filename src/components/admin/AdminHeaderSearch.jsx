@@ -1,11 +1,9 @@
-import { DropdownMenu, DropdownMenuContent, DropdownMenuTrigger, } from "../ui/dropdown-menu";
-import { headerDropdown } from "../../lib/admin";
-import { FaAngleDown } from "react-icons/fa";
+
 import { FaTimes } from "react-icons/fa";
 import { IoSearch } from 'react-icons/io5';
 import { useState } from "react";
 import { ImSearch } from "react-icons/im";
-
+import { AdminHeaderDropdown } from "./AdminHeaderDropdown";
 export function AdminHeaderSearch() {
     const [isSearchOpen, setIsSearchOpen] = useState(false);
     const [fade, setFade] = useState('');
@@ -28,44 +26,12 @@ export function AdminHeaderSearch() {
     return (
         <div className={`hidden lg:flex items-center gap-3 ${fade}`}>
             {!isSearchOpen ? (
-                <>
+                <div className="flex items-center gap-4">
                     <div className="bg-gray-200 p-2.5 rounded-full cursor-pointer" onClick={handleSearchClick}>
                         <ImSearch className="rotate-90 text-blue-700 text-xl" />
                     </div>
-                    <div className="flex gap-3">
-                        {headerDropdown.map((headerData, index) =>
-                            <DropdownMenu key={index}>
-                                <DropdownMenuTrigger asChild>
-                                    <h2 className="flex cursor-pointer text-sm items-center gap-1 font-medium">
-                                        {headerData.itemIcon}
-                                        <span className="flex items-center">
-                                            {headerData.itemName}
-                                            <FaAngleDown className="mt-[3px]" />
-                                        </span>
-                                    </h2>
-                                </DropdownMenuTrigger>
-                                <DropdownMenuContent>
-                                    <div>
-                                        <div className="bg-black rounded-t-md text-white p-2 text-center px-4">
-                                            <h2 className="font-bold text-lg">{headerData.cardData.title}</h2>
-                                            <p className="text-base">{headerData.cardData.des}</p>
-                                        </div>
-                                        <div className="p-4">
-                                            <ul className="space-y-4 text-sm font-semibold">
-                                                {headerData.cardData.list.map((listItem, index) =>
-                                                    <li key={index}>{listItem}</li>
-                                                )}
-                                            </ul>
-                                        </div>
-                                        <div className="p-4 border-t">
-                                            <button className="p-1 rounded-md px-6 font-medium text-white bg-rose-600">Cancel</button>
-                                        </div>
-                                    </div>
-                                </DropdownMenuContent>
-                            </DropdownMenu>
-                        )}
-                    </div>
-                </>
+                    <AdminHeaderDropdown/>
+                </div>
             ) : (
                 <div className="flex items-center gap-2 relative">
                     <IoSearch className='absolute text-xl left-2 text-gray-500 cursor-pointer' />
