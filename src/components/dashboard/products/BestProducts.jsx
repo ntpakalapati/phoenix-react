@@ -1,12 +1,12 @@
 import { useState } from 'react';
+import { RiArrowDropDownLine } from 'react-icons/ri';
+import Pagination from '../../common/Pagenation';
 import {
   Table,
   TableBody,
   TableCell,
   TableRow
 } from "./../../ui/table";
-import Pagination from '../../common/Pagenation';
-import { RiArrowDropDownLine } from 'react-icons/ri';
 
 const prodcuts = [
   {
@@ -106,12 +106,12 @@ export function BestProducts() {
   );
 
   return (
-    <div className="bg-white shadow-md rounded-lg lg:w-[49%] w-[100%] mt-4">
+    <div className="bg-white shadow-md rounded-lg xl:w-[49%] w-[100%] mt-4">
       <div className="flex justify-between p-4 border-b">
         <p className="text-[16px] font-medium text-[#495057] leading-[19.2px]">Best Selling Products</p>
         <div className='flex mt-1'>
           <p className='text-[12px] font-semibold leading-[18px] text-[#212529] uppercase'>Sort By : </p>
-          <span className='flex text-[13px] leading-[19.5px] ml-[2px] text-[#878A99]'>Today <RiArrowDropDownLine className='mt-1'/></span>
+          <span className='flex text-[13px] leading-[19.5px] ml-[2px] text-[#878A99]'>Today <RiArrowDropDownLine className='mt-1' /></span>
         </div>
       </div>
       <Table>

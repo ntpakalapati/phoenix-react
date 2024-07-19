@@ -1,5 +1,4 @@
 import { ArcElement, Chart as ChartJS, Legend, Tooltip } from 'chart.js';
-import React from 'react';
 import ReactApexChart from 'react-apexcharts';
 
 ChartJS.register(ArcElement, Tooltip, Legend);
@@ -10,13 +9,16 @@ export function SourceChart() {
     chart: {
       type: 'donut',
       width: '100%',
+      height: '100%'
     },
     labels: ['Direct', 'Social', 'Email', 'Other', 'Referrals'],
+    maintainAspectRatio: false,
     responsive: [{
       breakpoint: 480,
       options: {
         chart: {
           width: '100%',
+          height: '100%'
         },
         legend: {
           position: 'bottom',
@@ -49,7 +51,7 @@ export function SourceChart() {
   };
 
   return (
-    <div className='text-center w-full md:w-[60%] lg:w-full h-full mb-2 items-center'>
+    <div className='text-center w-full h-full items-center'>
       <ReactApexChart options={options} series={series} type="donut" />
     </div>
   );

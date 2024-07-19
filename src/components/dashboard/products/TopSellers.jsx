@@ -107,7 +107,7 @@ export function TopSellers() {
   );
 
   return (
-    <div className="bg-white shadow-md rounded-lg lg:w-[49%] w-[100%] mt-4">
+    <div className="bg-white shadow-md rounded-lg xl:w-[49%] w-[100%] mt-4">
       <div className="flex justify-between p-4 border-b mt-1">
         <p className="text-[16px] font-medium text-[#495057] leading-[19.2px]">Top Sellers</p>
         <span className='flex text-[13px] leading-[19.5px] text-[#878A99]'>Reports <RiArrowDropDownLine className='mt-1' /></span>

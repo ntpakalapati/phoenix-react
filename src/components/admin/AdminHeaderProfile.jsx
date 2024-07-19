@@ -1,8 +1,9 @@
+import { FaSignOutAlt } from "react-icons/fa";
 import { IoMdHelpCircleOutline, IoMdSettings } from "react-icons/io";
 import { LuPieChart } from "react-icons/lu";
-import { DropdownMenu, DropdownMenuContent, DropdownMenuTrigger, DropdownMenuItem } from "../ui/dropdown-menu";
 import { MdLock, MdPerson, MdPersonAddAlt } from "react-icons/md";
-import { FaSignOutAlt } from "react-icons/fa";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "../ui/dropdown-menu";
+
 export function AdminHeaderProfile() {
     return (
         <DropdownMenu>

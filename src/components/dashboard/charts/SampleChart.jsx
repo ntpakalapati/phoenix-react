@@ -1,5 +1,4 @@
-import React from 'react';
-import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, PointElement, LineElement, Title, Tooltip, Legend, LineController } from 'chart.js';
+import { BarElement, CategoryScale, Chart as ChartJS, Legend, LineController, LineElement, LinearScale, PointElement, Title, Tooltip } from 'chart.js';
 import { Bar } from 'react-chartjs-2';
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, PointElement, LineElement, Title, Tooltip, Legend, LineController);
@@ -36,6 +35,7 @@ const SampleChart = () => {
 
   const options = {
     responsive: true,
+    maintainAspectRatio: false,
     plugins: {
       legend: {
         position: 'bottom',
@@ -52,8 +52,10 @@ const SampleChart = () => {
   };
 
   return (
-    <div className="chart-container">
-      <Bar data={data} options={options}/>
+    <div className="mt-4 p-4" style={{ maxWidth: '600px', margin: '0 auto' }}>
+      <div style={{ position: 'relative', width: '100%', height: '400px' }}>
+        <Bar data={data} options={options} />
+      </div>
     </div>
   );
 };

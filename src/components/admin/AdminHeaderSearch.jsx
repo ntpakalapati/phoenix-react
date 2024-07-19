@@ -1,9 +1,10 @@
 
-import { FaTimes } from "react-icons/fa";
-import { IoSearch } from 'react-icons/io5';
 import { useState } from "react";
+import { FaTimes } from "react-icons/fa";
 import { ImSearch } from "react-icons/im";
+import { IoSearch } from 'react-icons/io5';
 import { AdminHeaderDropdown } from "./AdminHeaderDropdown";
+
 export function AdminHeaderSearch() {
     const [isSearchOpen, setIsSearchOpen] = useState(false);
     const [fade, setFade] = useState('');
@@ -30,7 +31,7 @@ export function AdminHeaderSearch() {
                     <div className="bg-gray-200 p-2.5 rounded-full cursor-pointer" onClick={handleSearchClick}>
                         <ImSearch className="rotate-90 text-blue-700 text-xl" />
                     </div>
-                    <AdminHeaderDropdown/>
+                    <AdminHeaderDropdown />
                 </div>
             ) : (
                 <div className="flex items-center gap-2 relative">

@@ -1,11 +1,4 @@
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow
-} from "./../ui/table";
+import * as React from "react";
 
 const orders = [
   {
@@ -64,47 +57,61 @@ const orders = [
     votes: "161"
   },
 ];
+const headers = ["Order ID", "Customer", "Product", "Amount", "Vendor", "Status", "Rating"]
 
 export function Orders() {
   return (
-    <Table>
-      <TableHeader>
-        <TableRow className="bg-[#F3F6F9] hover:bg-[#F3F6F9] text-[13px] font-semibold leading-[19.5px] h-[44px]">
-          <TableHead className="w-[100px]">Order ID</TableHead>
-          <TableHead>Customer</TableHead>
-          <TableHead>Product</TableHead>
-          <TableHead className="text-right">Amount</TableHead>
-          <TableHead>Vendor</TableHead>
-          <TableHead>Status</TableHead>
-          <TableHead>Rating</TableHead>
-        </TableRow>
-      </TableHeader>
-      <TableBody>
-        {orders.map((items) => (
-          <TableRow key={items.id}>
-            <TableCell className="text-[13px] font-medium leading-[19.5px] text-[#33416E]">{items.id}</TableCell>
-            <TableCell className="truncate flex items-center gap-2 text-[13px] leading-[19.5px] text-[#212529]">
-              <img
-                alt={`${items.customer} profile`}
-                src={items.profile}
-                className="h-[31px] w-[31px] rounded-full object-cover"
-              />
-              {items.customer}
-            </TableCell>
-            <TableCell className="truncate text-[13px] leading-[19.5px] text-[#212529]">{items.product}</TableCell>
-            <TableCell className="text-right text-[13px] leading-[19.5px] text-[#0AB39C]">{items.totalAmount}</TableCell>
-            <TableCell className="truncate text-[13px] leading-[19.5px] text-[#212529]">{items.vendor}</TableCell>
-            <TableCell>
-              <p className={`px-2 py-1 w-fit rounded-md text-[9.75px] leading-[9.26px] font-semibold text-[#495057] 
-              ${items.status === "Pending" ? 'text-[#F78848] bg-[#FEF4E4]' : items.status === "Unpaid" ? 'text-[#F05648] bg-[#FDE8E4]' : 'text-[#0AB39C] bg-[#DAF4F0]'}`}>{items.status}</p>
-            </TableCell>
-            <TableCell className="truncate text-[9.75pxpx] leading-[9.26px] font-semibold text-[#495057]">
-              {items.rating}{" "}
-              <span className="text-[11px] leading-[13.2px] font-medium text-[#878A99]">({items.votes} votes)</span>
-            </TableCell>
-          </TableRow>
-        ))}
-      </TableBody>
-    </Table>
+    <div className="relative w-full overflow-x-auto">
+      <table className="w-full caption-bottom">
+        <thead className="border-b">
+          <tr className="bg-[#F3F6F9] text-[13px] font-semibold leading-[19.5px] h-[44px]">
+            {headers.map((header) => (
+              <th key={header} className={`truncate h-12 p-[10px] ${header === "Amount" ? 'text-right' : 'text-left'} align-middle font-medium text-neutral-500 dark:text-neutral-400`}>
+                {header}
+              </th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {orders.map((items) => (
+            <tr
+              key={items.id}
+              className="transition-colors hover:bg-neutral-100/50"
+            >
+              <td className="pl-2 align-middle text-[13px] font-medium leading-[19.5px] text-[#33416E]">{items.id}</td>
+              <td className="py-[12px] px-1 align-middle truncate flex items-center gap-2 text-[13px] leading-[19.5px] text-[#212529] w-[140px]">
+                <img
+                  alt={`${items.customer} profile`}
+                  src={items.profile}
+                  className="h-[31px] w-[31px] rounded-full object-cover"
+                />
+                {items.customer}
+              </td>
+              <td className="align-middle truncate text-[13px] leading-[19.5px] text-[#212529]">{items.product}</td>
+              <td className="align-middle text-center text-[13px] leading-[19.5px] text-[#0AB39C]">{items.totalAmount}</td>
+              <td className="align-middle truncate text-[13px] leading-[19.5px] text-[#212529]">{items.vendor}</td>
+              <td style={{textAlign: '-webkit-center'}}>
+                <p
+                  className={`px-2 py-1 w-fit rounded-md text-[9.75px] leading-[9.26px] font-semibold text-[#495057] 
+                  ${items.status === "Pending"
+                      ? "text-[#F78848] bg-[#FEF4E4]"
+                      : items.status === "Unpaid"
+                        ? "text-[#F05648] bg-[#FDE8E4]"
+                        : "text-[#0AB39C] bg-[#DAF4F0]"
+                    }`}
+                >
+                  {items.status}
+                </p>
+              </td>
+              <td className="p-2 align-middle truncate text-[9.75px] leading-[9.26px] font-semibold text-[#495057]">
+                {items.rating}{" "}
+                <span className="text-[11px] leading-[13.2px] font-medium text-[#878A99]">({items.votes} votes)</span>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
   );
 }
+

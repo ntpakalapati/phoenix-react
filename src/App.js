@@ -5,7 +5,6 @@ import { AdminHeader } from './components/admin/AdminHeader';
 import { AdminNavBar } from './components/admin/AdminNavBar';
 import { AdminCollapseSideBar } from './components/admin/AdminCollapseSideBar';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-// Routes Pages Imports
 import { ECommerce } from './components/navbar/ECommerce';
 import { ProjectManagement } from './components/navbar/ProjectManagement';
 import { CRM } from './components/navbar/CRM';
@@ -40,14 +39,13 @@ function App() {
               <AdminNavBar toggleSidebar={toggleSidebar} />
             )}
           </nav>
-          <main className="flex-grow overflow-y-auto bg-[#F5F7FA]">
+          <main className="flex-grow overflow-y-auto bg-[#F5F7FA]" style={{ fontFamily: 'Poppins,sans-serif' }}>
             <Routes>
               <Route path='/' element={<Default />} />
               <Route path='/eComm' element={<ECommerce />} />
               <Route path='/projMgmt' element={<ProjectManagement />} />
               <Route path='/crm' element={<CRM />} />
             </Routes>
-
             <div>
               {isOpen && (
                 <div className="lg:hidden fixed top-24 w-[98%] mx-auto md:w-[85%] px-2 md:px-6 left-1/2 transform -translate-x-1/2 bg-white shadow-lg py-2.5 md:py-3 rounded-full border">
@@ -79,7 +77,6 @@ function App() {
                           <img src="https://demo.dashboardpack.com/architectui-html-pro/assets/images/avatars/1.jpg" alt='' className='w-full h-full rounded-full' />
                         </button>
                         <FaAngleDown className='text-gray-600' />
-                        
                       </div>
                     </div>
                   </div>

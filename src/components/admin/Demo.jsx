@@ -1,8 +1,6 @@
-import React from 'react';
 import { LuArrowRightToLine } from "react-icons/lu";
-
-import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuTrigger, } from "../ui/dropdown-menu"
 import { collapseData } from '../../lib/admin';
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel, DropdownMenuTrigger, } from "../ui/dropdown-menu";
 
 export function AdminCollapseSideBar({ toggleSidebar }) {
     return (

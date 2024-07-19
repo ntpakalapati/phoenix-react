@@ -1,25 +1,25 @@
 import { FiHelpCircle } from "react-icons/fi";
 import { AccordionContent, AccordionItem, AccordionTrigger } from "../ui/accordion";
 export function AdminNavPages() {
-    return (
-        <div>
-            <h2 className='mt-3 mb-2 px-4 text-start text-[10.24px] font-bold leading-[15.3px] uppercase text-[#6E7891]'>Pages</h2>
-            <AccordionItem value="item-9">
-                <AccordionTrigger>
-                    <div className='flex items-center gap-2'>
-                        <FiHelpCircle />
-                        <h2>FAQ</h2>
-                    </div>
-                </AccordionTrigger>
-                <AccordionContent>
-                    <ul className='w-[75%] mx-auto text-start'>
-                        <li className='hover:bg-gray-100 rounded-md p-1.5 px-3'>Faq accordion</li>
-                        <li className='hover:bg-gray-100 rounded-md p-1.5 px-3'>Faq tab</li>
-                    </ul>
-                </AccordionContent>
-            </AccordionItem>
+  return (
+    <div>
+      <h2 className='mt-3 mb-2 px-4 text-start text-[10.24px] font-bold leading-[15.3px] uppercase text-[#6E7891]'>Pages</h2>
+      <AccordionItem value="item-9">
+        <AccordionTrigger>
+          <div className='flex items-center gap-2'>
+            <FiHelpCircle />
+            <h2>FAQ</h2>
+          </div>
+        </AccordionTrigger>
+        <AccordionContent>
+          <ul className='w-[75%] mx-auto text-start'>
+            <li className='hover:bg-gray-100 rounded-md p-1.5 px-3'>Faq accordion</li>
+            <li className='hover:bg-gray-100 rounded-md p-1.5 px-3'>Faq tab</li>
+          </ul>
+        </AccordionContent>
+      </AccordionItem>
 
-            {/* <AccordionItem value="item-10">
+      {/* <AccordionItem value="item-10">
                 <AccordionTrigger>
                     <div className='flex items-center gap-2'>
                         <FaGlobe />
@@ -116,6 +116,6 @@ export function AdminNavPages() {
                     </ul>
                 </AccordionContent>
             </AccordionItem> */}
-        </div>
-    )
+    </div>
+  )
 }

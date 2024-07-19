@@ -2,8 +2,8 @@ import SampleChart from "./SampleChart";
 
 export function ChartCards() {
   return (
-    <div className="lg:flex  block w-full px-[4px] gap-6">
-      <div className="bg-white shadow-md rounded-lg  mt-4 lg:w-[65%] w-[100%]">
+    <div className="xl:flex  block w-full px-[4px] gap-6">
+      <div className="bg-white shadow-md rounded-lg  mt-4 xl:w-[65%] w-[100%]">
         <div className="flex justify-between p-4">
           <p className="text-[16px] font-medium text-[#495057] leading-[19.2px]">Revenue</p>
           <div className="flex justify-end space-x-1">
@@ -35,7 +35,7 @@ export function ChartCards() {
           <SampleChart />
         </div>
       </div>
-      <div className="bg-white shadow-md rounded-lg  mt-4 lg:w-[35%] w-[100%]">
+      <div className="bg-white shadow-md rounded-lg  mt-4 xl:w-[35%] w-[100%]">
         <div className="flex justify-between p-4 border-b">
           <p className="text-[16px] font-medium text-[#495057] leading-[19.2px]">Sales by Locations</p>
           <div className="flex justify-end space-x-2">

@@ -53,7 +53,7 @@ export function SummaryCards() {
         {data.map((card, index) => {
           const IconComponent = iconMapping[card?.iconName];
           return (
-            <div key={index} className="w-full sm:w-1/2 lg:w-1/4 p-[12px]">
+            <div key={index} className="w-full sm:w-1/2 xl:w-1/4 p-[12px]">
               <div className="bg-white rounded-md shadow p-4 flex flex-col justify-between h-full transform transition-transform duration-300 hover:shadow-md hover:shadow-gray-500/50 hover:-translate-y-2">
                 <div className="flex justify-between">
                   <p className="text-[13px] font-medium leading-[19.5px] uppercase text-[#878A99]">{card?.title}</p>
